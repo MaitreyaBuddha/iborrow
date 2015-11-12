@@ -7,6 +7,8 @@
  * iBorrow app. Because my friends borrow things from me and I forget.
  */
 
+'use strict';
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
