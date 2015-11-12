@@ -24,7 +24,9 @@
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
-      fblogin.testAPI();
+      localStorage.setItem('fbAT', response.authResponse.accessToken);
+      localStorage.setItem('fbID', response.authResponse.userID);
+      window.location = "/borrow";
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
