@@ -10,6 +10,8 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  script(type='text/javascript').
+    var fbAppID = #{fbAppID}
   script(type='text/javascript' src="/js/fblogin.js")
   fb:login-button(scope="public_profile,email" onlogin="fblogin.checkLoginState();")
   p.

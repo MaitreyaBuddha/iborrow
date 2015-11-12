@@ -7,7 +7,7 @@
  * Main client content handler
  */
 
-/* global document, window, FB */
+/* global document, window, FB, fbAppID */
 
 'use strict';
 
@@ -48,7 +48,7 @@
 
   window.fbAsyncInit = function() {
     FB.init({
-      appId: '618966918146429',
+      appId: fbAppID,
       cookie: true, // enable cookies to allow the server to access 
       // the session
       xfbml: true, // parse social plugins on this page

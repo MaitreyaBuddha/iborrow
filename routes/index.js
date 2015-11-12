@@ -12,9 +12,11 @@
 var express = require('express');
 var router = express.Router();
 
+var fbAppID = process.env.FB_APP_ID || 618966918146429;
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'iBorrow' });
+  res.render('index', { title: 'iBorrow', fbAppID: fbAppID });
 });
 
 module.exports = router;
