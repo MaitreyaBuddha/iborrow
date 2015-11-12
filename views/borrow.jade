@@ -1,0 +1,23 @@
+//- Author: Kelly Johnson
+//- Copyright 2015
+//- This work is licenced under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License
+//- http://creativecommons.org/licenses/by-nc-sa/4.0/
+//-
+//- Page for borrowing things
+
+extends layout
+
+block content
+  h2="What would you like to borrow?"
+  form(name="add-estimation", method="post")
+      div.input
+          span.label I'm borrowing 
+          - var example = 'a helmet, a cape...'
+          input(type="text", name="item", placeholder='#{example}')
+
+  h2="From whom?"
+      div.input 
+          input(type="text", name="whom")
+      p
+      div.actions
+          input(type="submit", value="Borrow")

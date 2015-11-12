@@ -19,4 +19,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'iBorrow', fbAppID: fbAppID });
 });
 
+/* GET home page. */
+router.get('/:pageName', function(req, res, next) {
+  var pageName = req.params.pageName.replace('.html','');
+  res.render(pageName, { title: 'iBorrow', fbAppID: fbAppID });
+});
+
 module.exports = router;
