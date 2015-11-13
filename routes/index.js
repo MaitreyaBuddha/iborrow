@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET home page. */
-router.get('/:pageName', function(req, res, next) {
+router.get('/page/:pageName', function(req, res, next) {
   var pageName = req.params.pageName.replace('.html','');
   res.render(pageName, { title: 'iBorrow', fbAppID: fbAppID });
 });

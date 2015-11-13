@@ -26,7 +26,7 @@
       // Logged into your app and Facebook.
       localStorage.setItem('fbAT', response.authResponse.accessToken);
       localStorage.setItem('fbID', response.authResponse.userID);
-      window.location = "/borrow";
+      window.location = "/page/borrow";
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
