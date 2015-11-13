@@ -9,15 +9,20 @@ extends layout
 
 block content
   h2="What would you like to borrow?"
-  form(name="add-estimation", method="post")
+  - var tbItem = 'itemtextbox'
+  - var tbWhom = 'whomtextbox'
+  script(type='text/javascript').
+    var itemText = '#{tbItem}';
+    var whomText = '#{tbWhom}';
+  script(type='text/javascript' src="/js/borrow.js")
+  form(name="iborrowing")
       div.input
           span.label I'm borrowing 
           - var example = 'a helmet, a cape...'
-          input(type="text", name="item", placeholder='#{example}')
+          input(type="text", id="#{tbItem}", placeholder='#{example}', onchange="borrow.text.setItem();")
 
   h2="From whom?"
-      div.input 
-          input(type="text", name="whom", placeholder='your mom')
+      div.input
+          input(type="text", id="#{tbWhom}", placeholder='your mom', onchange="borrow.text.setPerson();")
       p
-      div.actions
-          input(type="submit", value="Borrow")
+      button(onclick='borrow.click();') Borrow
